@@ -13,7 +13,7 @@ class RecyclerViewActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_list_of_proverbs)
+        setContentView(R.layout.activity_recyclerview)
 
         // 1) Create an adapter, whose data source is a list of Proverb objects.
         val adapter = ProverbListAdapter(
