@@ -26,6 +26,7 @@ class ProverbListAdapter(context: Context, private val proverbList: ArrayList<Pr
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProverbViewHolder {
+        //LayoutInflator inflates the XML for a list item.
         val proverbRow: View =
             LayoutInflater.from(mContext).inflate(R.layout.one_item, parent, false)
         return ProverbViewHolder(proverbRow)
