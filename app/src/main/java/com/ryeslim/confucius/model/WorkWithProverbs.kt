@@ -143,17 +143,13 @@ private constructor() {
         // that is why the the listOfProverbs should be reversed before writing to the file
         // and then reversed back to be ready to be shown on the screen
         Collections.reverse(listOfBookmarks)
-        println(listOfBookmarks.toString())
         val listOfBookmarksCopy = listOfBookmarks?.toList()
-        println(listOfBookmarksCopy.toString())
         for (index in listOfBookmarks!!.indices) {
             val prefix = "\n"
             if (writer != null) {
                 try {
                     writer.write("${listOfBookmarksCopy?.get(index)?.theID} ")
-                    println("${listOfBookmarksCopy?.get(index)?.theID} ")
                     writer.write("${listOfBookmarksCopy?.get(index)?.proverb}$prefix")
-                    println("${listOfBookmarksCopy?.get(index)?.proverb}$prefix")
                 } catch (e: IOException) {
                     e.printStackTrace()
                 }

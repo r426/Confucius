@@ -43,14 +43,10 @@ class ProverbListAdapter(context: Context, private val proverbList: ArrayList<Pr
         val thisProverb = proverbList[position]
         holder.textViewInTheHolder!!.text = thisProverb.proverb
         holder.buttonInTheHolder.setOnClickListener {
-            println(position)
-            println(proverbList[position].proverb)
             proverbList.removeAt(position)
             //Notify the adapter, that the data has changed so it can
             //update the RecyclerView to display the data.
-            notifyDataSetChanged() //does the job correctly but without animation
-            //notifyItemRemoved(position) – adds animation if used on its own, yet fails to remove items correctly
-            //notifyItemRangeChanged(position, getItemCount()) – not necessary here
+            notifyDataSetChanged()
             WorkWithProverbs.getInstance().saveTheUpdatedList()
         }
     }
