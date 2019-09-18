@@ -27,7 +27,7 @@ class RecyclerViewActivity : AppCompatActivity() {
         // 3) Give the RecyclerView a default layout manager.
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-        // 4) Make the RecyclerView use the ArrayAdapter
+        // 4) Make the RecyclerView use the adapter
         recyclerView.adapter = adapter
     }
 
