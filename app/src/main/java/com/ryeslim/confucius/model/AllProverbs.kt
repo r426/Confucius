@@ -43,7 +43,7 @@ class AllProverbs private constructor() {
     fun setLoadingQue(loadingQue: RequestQueue) {
         this.loadingQue = loadingQue
         val arrReq = JsonArrayRequest(
-            Request.Method.GET, "https://api.myjson.com/bins/19ejpp",
+            Request.Method.GET, "https://api.npoint.io/d98f6ae8641988b97604",
             Response.Listener<JSONArray> { response ->
                 // Check the length of our response (to see if the user has any repos)
                 if (response.length() > 0) {
